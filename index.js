@@ -3,12 +3,12 @@ class Player {
     position = "Unknown position",
     name = "Unknown name",
     club = "Unknown club",
-    number = "Unknown number"
+    playerNumber = "Unknown number"
   ) {
     this.position = position;
     this.name = name;
     this.club = club;
-    this.number = number;
+    this.playerNumber = playerNumber;
   }
 
   showPlayerInfo() {
@@ -16,7 +16,11 @@ class Player {
   }
 
   getPlayerNumber() {
-    return this.number;
+    return this.playerNumber;
+  }
+
+  showPlayerNumber() {
+    console.log(`This player wears number ${this.playerNumber}`);
   }
 }
 
@@ -31,11 +35,13 @@ console.log(lfcPlayer);
 
 lfcPlayer.showPlayerInfo();
 
-console.log(lfcPlayer.getPlayerNumber);
+console.log(lfcPlayer.getPlayerNumber());
 
-class PlayerInfo extends Player {
-  constructor({ position, name, club, number, award, goals }) {
-    super(position, name, club, number);
+lfcPlayer.showPlayerNumber();
+
+class TopPlayer extends Player {
+  constructor({ position, name, club, playerNumber, award, goals }) {
+    super(position, name, club, playerNumber);
     this.award = award;
     this.goals = goals;
   }
@@ -48,13 +54,13 @@ class PlayerInfo extends Player {
   }
 }
 
-const lfcStriker = new PlayerInfo({
+const lfcStriker = new TopPlayer({
   position: "Striker",
   name: "Mo Salah",
   club: "Liverpool FC",
-  number: "11",
+  playerNumber: "11",
   award: "PFA Player of the Year 2017/2018",
-  goals: "19"
+  goals: 19
 });
 
 console.log(lfcStriker);
