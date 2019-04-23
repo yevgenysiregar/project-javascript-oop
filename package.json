@@ -4,6 +4,10 @@
   "description": "Project JavaScript OOP to learn OOP",
   "main": "index.js",
   "repository": "https://github.com/yevgenysiregar/project-javascript-oop.git",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
   "author": "Yevgeny Omar Siregar <siregar.yevgeny@gmail.com>",
   "license": "MIT",
   "dependencies": {
