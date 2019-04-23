@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/yevgenysiregar/project-javascript-oop.git",
   "author": "Yevgeny Omar Siregar <siregar.yevgeny@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "1.18.11"
+  }
 }
